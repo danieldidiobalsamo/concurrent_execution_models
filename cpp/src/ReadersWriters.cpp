@@ -1,13 +1,13 @@
 #include "ReadersWriters.hpp"
-#include <mutex>
 #include <vector>
 
 namespace ReadersWriters {
 
 int readCount = 0;
-std::mutex readMutex{};
-std::mutex writeMutex{};
-std::mutex serviceQueue{}; // this mutex avoids writers or readers starvation
+boost::fibers::mutex readMutex{};
+boost::fibers::mutex writeMutex{};
+boost::fibers::mutex
+    serviceQueue{}; // this mutex avoids writers or readers starvation
 
 int sharedInt = 0;
 
