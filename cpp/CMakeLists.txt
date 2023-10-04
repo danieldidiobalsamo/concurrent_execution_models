@@ -7,11 +7,14 @@ find_package( Boost 1.74.0 COMPONENTS thread fiber context )
 # C++ standard and compilation flags
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra -Wold-style-cast -Wno-unused-command-line-argument")
+set(CMAKE_CXX_FLAGS "-pedantic -Wall -Wextra -Werror -Wold-style-cast -Wno-unused-command-line-argument")
 
 set(SRC
     inc/ProducerConsumer.hpp
     src/ProducerConsumer.cpp
+
+    inc/ReadersWriters.hpp
+    src/ReadersWriters.cpp
 
     src/main.cpp)
 
