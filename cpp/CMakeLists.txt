@@ -16,6 +16,9 @@ set(SRC
     inc/ReadersWriters.hpp
     src/ReadersWriters.cpp
 
+    inc/DiningPhilosophers.hpp
+    src/DiningPhilosophers.cpp
+
     src/main.cpp)
 
 include_directories(inc ${Boost_INCLUDE_DIRS})
